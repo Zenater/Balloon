@@ -1,19 +1,22 @@
-*
+* ::after, ::before
     margin: 0
     padding: 0
     box-sizing: border-box
+
+html
+    font-size: 62.5%
 
 body
     font-family: 'Lato',sans-serif
     font-weight: 400
     color: #777
-    font-size: 16px
-    letter-spacing: 2px
-    padding: 50px
+    font-size: 1.6rem
+    letter-spacing: .2rem
+    padding: 5rem
     background-color:  #F7F7F7
 
 .container
-    background-color: #F7F7F7 
+    background-color: #F7F7F7
 
 .header
     position: relative
@@ -22,10 +25,10 @@ body
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
     &__logo
         position: absolute
-        left: 50px
-        top: 50px
-        height: 70px
-        width: 56px
+        left: 5rem
+        top: 5rem
+        height: 7rem
+        width: 5.6rem
     &__box
         position: absolute
         left: 50%
@@ -38,11 +41,11 @@ body
     &__main
         display: block
         font-weight: 800
-        font-size: 50px
-        line-height: 60px
-        letter-spacing: 10px
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
         text-transform: uppercase
-        margin-bottom: 10px
+        margin-bottom: 1rem
         animation-name: leftToRight
         animation-duration: 3s  //время действия анимации
         animation-delay: 2s // задержка анимации
@@ -52,30 +55,28 @@ body
     &__secondary
         display: block
         font-weight: 300
-        font-size: 40px
-        line-height: 48px
-        letter-spacing: 5px
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: .5rem
         animation-name: RightToLeft
         animation-duration: 3s  //время действия анимации
         animation-delay: 2s // задержка анимации
         animation-timing-function: ease //более плавно
-        backface-visibility: hidden 
-        margin-bottom: 65px 
-        
+        backface-visibility: hidden
+        margin-bottom:  6.5rem
+
 .btn
     &:link, &:visited
         position: relative
         display: inline-block //block
-        padding: 15px 40px
+        padding: 1.5rem 4rem
         background: #FFFFFF
-        border-radius: 50px
+        border-radius: 5rem
         text-decoration: none // убирает подчеркнутый текст
         text-transform: uppercase
         font-style: normal
         font-weight: 600
-        font-size: 20px
-        line-height: 24px
-        letter-spacing: 5px
+        font-size: 2rem
         color: #777777
         transition: all .5s // более красивое более плавной, 1 парамтр к какому свойству
     &:hover
@@ -88,20 +89,20 @@ body
         transform: translateY(-2px)
         box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1))
     &::after
-        content: ''//без него псевдоэлемент не сработает
+        content: '' //без него псевдоэлемент не сработает
         background: #FFFFFF
         height: 100%
         width: 100%
-        border-radius: 50px
-        display: inline-block 
+        border-radius: 5rem
+        display: inline-block
         position: absolute
         top: 0
         left: 0
-        z-index: -1//чтобы элемент был под кнопкой
+        z-index: -1 //чтобы элемент был под кнопкой
         transition: all .6s
     &_animated
         animation: BtnToUp .8s ease-out .7s
-        animation-fill-mode: backwards //отвечает за всплытие 
+        animation-fill-mode: backwards //отвечает за всплытие
 
 
 @keyframes BtnToUp
