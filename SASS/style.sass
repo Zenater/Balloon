@@ -1,3 +1,30 @@
+//Цвет текста
+$color-gray: #777777
+
+//Основные цвета сайта
+$color-brown-light: #BA8554
+$color-brown-dark: #A14F03
+
+//Черный и белый цвет сайта
+$color-black: #000000
+$color-white: #ffffff
+
+//Тень для кнопок
+$box-shadow: (0px .4rem .4rem rgba(0, 0, 0, 0.3))
+$shadow-h2: 0rem .4rem .4rem rgba($color-black, .25)
+
+//Отступы
+$margin-vertical-big: 8rem
+$grid-width: 114rem
+$gutter-horizontal: 6rem
+
+//Типографика
+$font-size-paragraph: 1.6rem
+$font-size-paragraph-h2: 3.6rem
+$font-size-paragraph-h3: 2rem
+    
+    
+    
 * ::after, ::before
     margin: 0
     padding: 0
@@ -81,13 +108,13 @@ body
         transition: all .5s // более красивое более плавной, 1 парамтр к какому свойству
     &:hover
         transform: translateY(-4px)
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.5))
+        box-shadow: $box-shadow
         &::after
             opacity: 0
             transform: scaleX(1.4) scaleY(1.5)
     &:active
         transform: translateY(-2px)
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1))
+        box-shadow: $box-shadow
     &::after
         content: '' //без него псевдоэлемент не сработает
         background: #FFFFFF
@@ -136,3 +163,4 @@ body
         transform: translateX(0px)
 
         
+//% and extends its templates
