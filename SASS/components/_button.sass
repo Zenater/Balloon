@@ -1,0 +1,39 @@
+
+.btn
+    &:link, &:visited
+        position: relative
+        display: inline-block //block
+        padding: 1.5rem 4rem
+        background: #FFFFFF
+        border-radius: 5rem
+        text-decoration: none // убирает подчеркнутый текст
+        text-transform: uppercase
+        font-style: normal
+        font-weight: 600
+        font-size: 2rem
+        color: #777777
+        transition: all .5s // более красивое более плавной, 1 парамтр к какому свойству
+    &:hover
+        transform: translateY(-4px)
+        box-shadow: $box-shadow
+        &::after
+            opacity: 0
+            transform: scaleX(1.4) scaleY(1.5)
+    &:active
+        transform: translateY(-2px)
+        box-shadow: $box-shadow
+    &::after
+        content: '' //без него псевдоэлемент не сработает
+        background: #FFFFFF
+        height: 100%
+        width: 100%
+        border-radius: 5rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1 //чтобы элемент был под кнопкой
+        transition: all .6s
+    &_animated
+        animation: BtnToUp .8s ease-out .7s
+        animation-fill-mode: backwards //отвечает за всплытие
