@@ -183,6 +183,16 @@ body {
           animation-fill-mode: backwards;
 }
 
+.row {
+  max-width: 114rem;
+  background: #c89393;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
 .header {
   position: relative;
   height: 95vh;

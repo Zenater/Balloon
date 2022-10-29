@@ -1,12 +1,16 @@
 body
     font-family: 'Lato',sans-serif
     font-weight: 400
-    color: #777
-    font-size: 1.6rem
+    color: $color-gray
+    font-size: $font-size-paragraph
     letter-spacing: .2rem
     padding: 5rem
     background-color:  #F7F7F7
-    
+
+.text-align-center 
+  text-align: center
+  
+
 .title-first //заголовки и текст в типографию
     color: #FFFFFF
     &__main
@@ -33,5 +37,37 @@ body
         animation-duration: 3s  //время действия анимации
         animation-delay: 2s // задержка анимации
         animation-timing-function: ease //более плавно
-        backface-visibility: hidden
+        backface-visibility: hidden //помогает с багами в анимации
         margin-bottom:  6.5rem
+
+.title-secondary
+    text-align: center
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 800
+    font-size: 3.6rem
+    line-height: 4.3rem
+    letter-spacing: 1rem
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+    -webkit-background-clip: text // вендерные префиксы //вместо опасити
+    transition: all .4s
+    color: transparent
+    backface-visibility: hidden //помогает с багами в анимации
+    &:hover
+        transform: skewY(2deg) skewX(15deg)  scale(1.1)
+        text-shadow: $shadow-h2
+
+.title-third
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: .2rem;
+
+
+.paragraph 
+    font-weight: 400;
+    font-size: $font-size-paragraph
+    line-height: 140%;
+    letter-spacing: .2rem;
+
+
